@@ -6,8 +6,8 @@ module.exports = function(config) {
 
     // global config for SauceLabs
     sauceLabs: {
-      username: 'akollegger',
-      accessKey: 'ff1b10cf-880d-426e-af1a-3f5e5db70a0d',
+      username: 'neo4j',
+      accessKey: 'get-this-from-somewhere-else-not-git-managed',
       startConnect: true,
       testName: 'neo4j browser unit tests'
     },
@@ -94,8 +94,8 @@ module.exports = function(config) {
     // - PhantomJS
     // - IE (only Windows)
     // browsers: ['PhantomJS','sl_safari_mac','sl_ie_windows_8'],
-    // browsers: ['PhantomJS'],
-    browsers: ['sl_ie_windows_8'],
+    browsers: ['PhantomJS'],
+    // browsers: ['sl_ie_windows_8'],
 
 
     // If browser does not capture in given timeout [ms], kill it
