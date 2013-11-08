@@ -107,7 +107,7 @@ angular.module('neo4jApp.services')
           interpreterFor: (input = '') ->
             intr = null
             input = Utils.stripComments(input.trim())
-            args = Utils.argv(input)
+            firstWord = Utils.firstWord(input)
             for i in self.interpreters
               if angular.isFunction(i.matches)
                 if i.matches(input)
@@ -116,7 +116,7 @@ angular.module('neo4jApp.services')
                 cmds = i.matches
                 cmds = [cmds] if angular.isString(i.matches)
                 if angular.isArray(cmds)
-                  if cmds.indexOf(args[0]) >= 0
+                  if cmds.indexOf(firstWord) >= 0
                     return i
             intr
 

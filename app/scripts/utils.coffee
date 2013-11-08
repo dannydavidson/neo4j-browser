@@ -49,5 +49,8 @@ angular.module('neo4jApp.utils', [])
       rows = input.split("\n")
       rv = []
       rv.push row for row in rows when row.indexOf('//') isnt 0
-      rv.join(" ")
+      rv.join("\n")
+
+    firstWord: (input) ->
+      input.split(/\n| /)[0] 
   ])
