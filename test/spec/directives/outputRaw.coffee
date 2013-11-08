@@ -3,6 +3,12 @@
 describe 'Directive: outputRaw', () ->
   beforeEach module 'neo4jApp.directives'
 
+
+  # load the service's module
+  beforeEach module 'neo4jApp.services'
+
+  # instantiate service
+
   element = {}
 
   it 'should only set the first content', inject ($rootScope, $compile) ->

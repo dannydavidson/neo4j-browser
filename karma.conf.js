@@ -6,7 +6,7 @@ module.exports = function(config) {
 
     // global config for SauceLabs
     sauceLabs: {
-      username: 'neo4j',
+      username: 'neo4j-account-is-needed',
       accessKey: 'get-this-from-somewhere-else-not-git-managed',
       startConnect: true,
       testName: 'neo4j browser unit tests'

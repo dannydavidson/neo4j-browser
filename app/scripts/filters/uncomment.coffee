@@ -20,6 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 'use strict';
 
+# TODO refactor this filter and the utile.coffee implementation
 angular.module('neo4jApp.filters')
   .filter 'uncomment', () ->
     (input) ->
