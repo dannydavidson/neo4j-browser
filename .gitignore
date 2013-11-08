@@ -31,4 +31,3 @@ pom.xml.tag
 # ignore sauce labs artifacts
 sauce_connect*
 test-results.xml
-
