@@ -52,6 +52,9 @@ angular.module('neo4jApp.controllers')
         ev?.preventDefault()
         $('#editor textarea').focus()
 
+      $scope.isEditorFocused = () ->
+        $('.CodeMirror-focused').length > 0
+
       $scope.editor = Editor
       $scope.editorOneLine = true
       $scope.editorChanged = (codeMirror) ->
@@ -99,6 +102,7 @@ angular.module('neo4jApp.controllers')
         # Don't toggle anything when shortcut popup is open
         return if $scope.isPopupShown and e.keyCode != 191
 
+        # ABK: kinda weird as a global key.
         if (e.metaKey or e.ctrlKey) and e.keyCode is 13 # Cmd-Enter
           e.preventDefault()
           Editor.execCurrent()
@@ -113,6 +117,12 @@ angular.module('neo4jApp.controllers')
             $scope.togglePopup()
           else
             Editor.maximize()
+        else if e.keyCode is 191 # '/'
+          unless $scope.isEditorFocused()
+            e.preventDefault()
+            $scope.focusEditor()
+        # else 
+        #   console.debug(e)
 
       # we need set a max-height to make the stream scrollable, but since it's
       # position:relative the max-height needs to be calculated.

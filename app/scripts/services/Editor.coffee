@@ -60,6 +60,7 @@ angular.module('neo4jApp.services')
         execCurrent: ->
           @execScript(@content)
 
+        # ABK: seems like something the Editor should not be doing
         focusEditor: ->
           $('#editor textarea').focus()
 
