@@ -1,4 +1,6 @@
-require 'buildr/scala' 
+require 'buildr/scala'
+
+# This is just for fun.  You should probably start with the Maven build.
 
 project_layout = Layout.new
 project_layout[:source, :test, :scala] = 'tools/src/test/scala'
