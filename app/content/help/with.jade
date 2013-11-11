@@ -28,7 +28,7 @@ article.help
     section.row-fluid.example
       .span9.offset3
         figure
-          pre.code(mode='cypher').
+          pre.code.runnable.
             MATCH (director:Person)-[:DIRECTED]->(movie)
             WITH director, count(movie) as directed ORDER BY directed DESC LIMIT 1
               MATCH (hopeful:Person)-[:ACTED_IN]->(movie)

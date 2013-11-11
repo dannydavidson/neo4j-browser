@@ -30,7 +30,7 @@ article.help
     section.row-fluid.example
       .span9.offset3
         figure
-          pre.code(mode='cypher').
+          pre.code.runnable.
             MATCH p = (ups)<-[DEPENDS_ON]-(device) WHERE ups.id='EPS-7001'
             FOREACH (n IN nodes(p) | SET n.available = FALSE )
           figcaption Mark all devices plugged into a failed UPS as unavailable.

@@ -35,7 +35,7 @@ article.help
     section.row-fluid.example
       .span9.offset3
         figure
-          pre.code(mode='cypher').
+          pre.code.runnable.
             MATCH (director:Person)-[:DIRECTED]->(movie)
             WHERE director.name = "Steven Spielberg"
             RETURN movie.title

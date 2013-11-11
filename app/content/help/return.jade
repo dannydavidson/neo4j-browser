@@ -27,7 +27,7 @@ article.help
     section.row-fluid.example
       .span9.offset3
         figure
-          pre.code(mode='cypher').
+          pre.code.runnable.
             MATCH (director:Person)-[:DIRECTED]->(movie)
             RETURN director.name AS Director, collect(movie.title) AS Movies
           figcaption Return all directors, each paired with a collection of the movies they've directed.

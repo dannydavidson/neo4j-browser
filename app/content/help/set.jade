@@ -27,7 +27,7 @@ article.help
     section.row-fluid.example
       .span9.offset3
         figure
-          pre.code(mode='cypher').
+          pre.code.runnable.
             MATCH (fan:Person)-[w:WATCHED]->(movie)
             WHERE fan.name = "Mikey"
             SET w.rating = 5
